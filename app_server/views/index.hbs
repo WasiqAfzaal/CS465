@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Travlr Getaways</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+  </nav>
+</header>
+
+<main>
+  <h2>{{headline}}</h2>
+  <p>{{intro}}</p>
+
+  <h3>Featured Trips</h3>
+  <ul>
+    {{#each trips}}
+      <li>
+        <strong>{{this.name}}</strong><br>
+        Location: {{this.location}}<br>
+        Price: {{this.price}}
+      </li>
+    {{/each}}
+  </ul>
+</main>
+
+<footer>
+  <p>© Travlr Getaways</p>
+</footer>
+
+</body>
+</html>

@@ -1,13 +1,20 @@
 const express = require('express');
 const path = require('path');
+const hbs = require('hbs');
+
+const indexRouter = require('./app_server/routes/index');
 
 const app = express();
-const port = 3000;
 
-// Serve static files from the public folder
+app.set('views', path.join(__dirname, 'app_server/views'));
+app.set('view engine', 'hbs');
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Start the server
+app.use('/', indexRouter);
+
+const port = 3000;
+
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at localhost:${port}`);
 });
