@@ -11,6 +11,7 @@
   <nav>
     <a href="/">Home</a>
     <a href="/about">About</a>
+    <a href="/travel">Travel</a>
   </nav>
 </header>
 
@@ -19,15 +20,20 @@
   <p>{{intro}}</p>
 
   <h3>Featured Trips</h3>
-  <ul>
+
+  <div class="trip-list">
     {{#each trips}}
-      <li>
-        <strong>{{this.name}}</strong><br>
-        Location: {{this.location}}<br>
-        Price: {{this.price}}
-      </li>
+      <div class="trip-card">
+        <h3>{{name}}</h3>
+        <p><strong>Length:</strong> {{length}}</p>
+        <p><strong>Start:</strong> {{start}}</p>
+        <p><strong>Resort:</strong> {{resort}}</p>
+        <p><strong>Price:</strong> ${{perPerson}}</p>
+        <p>{{description}}</p>
+      </div>
+      <hr>
     {{/each}}
-  </ul>
+  </div>
 </main>
 
 <footer>

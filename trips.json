@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Beach Escape",
+    "length": "7 nights",
+    "start": "2026-06-15",
+    "resort": "Cancun Resort",
+    "perPerson": 1299,
+    "image": "/images/trip1.jpg",
+    "description": "Relax on sunny beaches with crystal clear water."
+  },
+  {
+    "name": "Mountain Adventure",
+    "length": "5 nights",
+    "start": "2026-07-10",
+    "resort": "Denver Lodge",
+    "perPerson": 999,
+    "image": "/images/trip2.jpg",
+    "description": "Explore scenic mountains and outdoor adventures."
+  },
+  {
+    "name": "City Lights",
+    "length": "4 nights",
+    "start": "2026-08-01",
+    "resort": "NYC Grand Hotel",
+    "perPerson": 1499,
+    "image": "/images/trip3.jpg",
+    "description": "Experience vibrant city life and iconic landmarks."
+  }
+]
