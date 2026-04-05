@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Trip = mongoose.model('Trip');
 
-// HOME PAGE (uses database now)
 const home = async (req, res) => {
   try {
     const trips = await Trip.find().lean();
@@ -16,7 +15,6 @@ const home = async (req, res) => {
   }
 };
 
-// ABOUT PAGE
 const about = (req, res) => {
   res.render('about', {
     title: 'About Travlr Getaways',
@@ -24,7 +22,6 @@ const about = (req, res) => {
   });
 };
 
-// TRAVEL PAGE (now uses MongoDB instead of JSON)
 const travel = async (req, res) => {
   try {
     const trips = await Trip.find().lean();
@@ -37,20 +34,8 @@ const travel = async (req, res) => {
   }
 };
 
-// API ENDPOINT (REQUIRED FOR MODULE 4)
-const getTrips = async (req, res) => {
-  try {
-    const trips = await Trip.find().lean();
-    res.json(trips);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-};
-
-// EXPORTS
 module.exports = {
   home,
   about,
-  travel,
-  getTrips
+  travel
 };
