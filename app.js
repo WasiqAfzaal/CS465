@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
+const cors = require('cors');
 
 require('./app_server/models/db');
 
@@ -12,6 +13,7 @@ const app = express();
 app.set('views', path.join(__dirname, 'app_server/views'));
 app.set('view engine', 'hbs');
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
